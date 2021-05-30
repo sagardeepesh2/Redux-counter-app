@@ -1,14 +1,19 @@
-import React from 'react';
-import store from './store/index.js';
-import { Provider } from 'react-redux';
+import React, { Fragment } from 'react';
+import {useSelector } from 'react-redux';
 import Counter from './components/Counter';
-
+import Auth from './components/Auth';
+import Header from './components/Header';
+import User from './components/UserProfile';
 
 function App() {
+  const auth = useSelector(state => state.auth);
   return (
-    <Provider store={store}>
-      <Counter />
-    </Provider>
+    <Fragment>
+      <Header />
+      {!auth && <Auth />}
+      {auth &&<User />}
+      {auth&&<Counter />}
+    </Fragment>
   );
 }
 
