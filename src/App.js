@@ -11,7 +11,6 @@ function App() {
     <Fragment>
       <Header />
       {!auth && <Auth />}
-      {auth &&<User />}
       {auth&&<Counter />}
     </Fragment>
   );

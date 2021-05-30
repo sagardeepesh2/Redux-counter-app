@@ -9,7 +9,7 @@ const Header = () => {
   }
   return (
     <header className={classes.header}>
-      <h1>Redux Auth</h1>
+      <h1>Counter Redux Auth</h1>
       <nav>
         <ul>
           <li>
